@@ -1,4 +1,4 @@
-"""Script para geração de PDF executivo comercial do Traffic Copilot AI (Visão de Produto Final)."""
+"""Script para geração de PDF executivo comercial do Traffic Copilot AI (Posicionamento Multicategoria / Qualquer Nicho)."""
 
 import os
 from reportlab.lib.pagesizes import letter
@@ -37,7 +37,7 @@ class NumberedCanvas(canvas.Canvas):
         self.setLineWidth(0.5)
         self.line(40, 35, 572, 35)
         
-        self.drawString(40, 22, "Traffic Copilot AI • Proposta Comercial & Apresentação Executiva")
+        self.drawString(40, 22, "Traffic Copilot AI • Gestão Autônoma de Tráfego & IA para Qualquer Nicho")
         page_str = f"Página {self._pageNumber} de {page_count}"
         self.drawRightString(572, 22, page_str)
         self.restoreState()
@@ -123,12 +123,12 @@ def build_pdf(filename: str):
     # HEADER / CABEÇALHO EXECUTIVO
     # =========================================================================
     story.append(Paragraph("TRAFFIC COPILOT AI 🚀", title_style))
-    story.append(Paragraph("O Gestor Autônomo de Tráfego Pago & Criação para Marcas de Moda", subtitle_style))
+    story.append(Paragraph("O Gestor Autônomo de Tráfego Pago & Criação para Empresas e E-commerce", subtitle_style))
     story.append(HRFlowable(width="100%", thickness=1.5, color=colors.HexColor("#2563EB"), spaceAfter=10))
 
     intro_box = [
         [Paragraph(
-            "<b>Visão Geral da Solução:</b> O <b>Traffic Copilot AI</b> é um ecossistema inteligente de marketing e vendas que assume 100% da operação de tráfego pago da loja direto pelo <b>WhatsApp</b>. O lojista apenas envia as fotos das peças e o sistema cria os anúncios, formata as imagens, sobe as campanhas na Meta e protege o orçamento 24 horas por dia.",
+            "<b>Visão Geral da Solução:</b> O <b>Traffic Copilot AI</b> é um ecossistema inteligente de marketing e vendas que assume 100% da operação de tráfego pago de qualquer empresa direto pelo <b>WhatsApp</b>. Não importa o nicho (moda, cosméticos, eletrônicos, suplementos, acessórios ou serviços): o empresário apenas envia a foto ou informações do produto e a IA analisa, cria os anúncios, formata os banners, sobe as campanhas na Meta e protege o orçamento 24 horas por dia.",
             body_style
         )]
     ]
@@ -147,42 +147,42 @@ def build_pdf(filename: str):
     # =========================================================================
     # OS 6 PILARES DE FUNCIONALIDADES ENTREGUES
     # =========================================================================
-    story.append(Paragraph("O Que o Sistema Entrega para o Lojista (Funcionalidades)", h1_style))
+    story.append(Paragraph("O Que o Sistema Entrega para o Seu Negócio (Funcionalidades)", h1_style))
 
     features = [
         (
-            "1. 🧠 Máquina Contínua de Criativos com Inteligência de Moda",
-            "• <b>Análise Visual Instantânea:</b> O sistema analisa a foto da peça (corte, caimento, linho, algodão, gola) e entende a proposta do produto.<br/>"
-            "• <b>Multi-Ângulos de Conversão:</b> Gera de 5 a 10 variações de textos vendedores explorando o que realmente faz vender: frescor no calor, tecido que não encolhe nem amarrota, durabilidade e combos de kit.<br/>"
-            "• <b>Filtros Anti-Bloqueio:</b> Textos 100% em conformidade com as diretrizes da Meta (sem promessas falsas ou gatilhos que causem restrição)."
+            "1. 🧠 Máquina Contínua de Criativos com Inteligência Adaptativa",
+            "• <b>Visão Computacional Multicategoria:</b> Analisa a foto ou vídeo do produto (roupas, cosméticos, eletrônicos, calçados, joias, etc.) e identifica automaticamente os diferenciais, proposta de valor e apelo visual.<br/>"
+            "• <b>Múltiplos Ângulos de Conversão:</b> Gera de 5 a 10 variações de textos persuasivos focando nos motivos reais de compra do cliente: resolução de dor, praticidade, custo-benefício, exclusividade e kits/combos.<br/>"
+            "• <b>Filtros Anti-Bloqueio:</b> Textos rigorosamente calibrados com as diretrizes da Meta (sem clickbait ou termos sensíveis que possam restringir a conta)."
         ),
         (
-            "2. 🎨 Design e Formatação Automática de Banners",
-            "• <b>Multi-Formatos Oficiais:</b> Gera na hora a versão quadrada para <b>Feed (1:1)</b> e vertical para <b>Stories/Reels (9:16)</b>.<br/>"
-            "• <b>Enquadramento Profissional:</b> Centraliza a roupa mantendo respiro e fundo neutro de moda.<br/>"
-            "• <b>Aplicação Dinâmica de Selos:</b> Aplica automaticamente selos de alto impacto (ex: <i>'100% Algodão Nobre'</i>, <i>'Frete Grátis no Combo'</i>, <i>'Compre 2 Leve 3'</i>)."
+            "2. 🎨 Design e Banners Automáticos com Selos da sua Oferta",
+            "• <b>Multi-Formatos Prontos para Anúncio:</b> Gera instantaneamente a versão quadrada para <b>Feed (1:1)</b> e vertical para <b>Stories/Reels (9:16)</b>.<br/>"
+            "• <b>Enquadramento e Fundo Profissional:</b> Centraliza o produto mantendo respiro elegante e fundo limpo de alto padrão.<br/>"
+            "• <b>Aplicação Dinâmica de Selos:</b> Aplica automaticamente selos de conversão adequados ao seu produto (ex: <i>'Frete Grátis'</i>, <i>'Compre 2 Leve 3'</i>, <i>'Envio em 24h'</i>, <i>'Garantia Estendida'</i>)."
         ),
         (
             "3. 🛡️ Sentinela 24 Horas & 'Stop-Loss de Trader' (Proteção de Caixa)",
-            "• <b>Corte Imediato de Prejuízo:</b> Se um anúncio gastar o valor teto de uma venda sem converter, o sistema <b>pausa o anúncio automaticamente na Meta</b>.<br/>"
-            "• <b>Detector de Campeões (Escala):</b> Identifica anúncios com ROAS acima de 3.0x e avisa para aumentar a verba com segurança.<br/>"
-            "• <b>Detector de Fadiga:</b> Alerta quando um criativo cansou e já prepara novos anúncios para substituir."
+            "• <b>Corte Imediato de Prejuízo:</b> Se um anúncio gastar o valor teto estipulado de uma venda sem converter, o sistema <b>pausa o anúncio sozinho na Meta</b> para não queimar o dinheiro da empresa.<br/>"
+            "• <b>Detector de Campeões (Escala):</b> Identifica criativos com alto retorno (ROAS &ge; 3.0x) e recomenda aumento seguro do orçamento.<br/>"
+            "• <b>Detector de Fadiga:</b> Alerta quando o público cansa de um anúncio e já prepara novos criativos para manter as vendas em alta."
         ),
         (
             "4. 📱 Gestão de Bolso Direto pelo WhatsApp (Zero Complexidade)",
-            "• <b>Sem Painéis Complicados:</b> O dono da marca não precisa abrir o computador nem entender o Gerenciador da Meta.<br/>"
-            "• <b>Aprovação em 1 Clique:</b> O lojista recebe a prévia do anúncio no WhatsApp e responde apenas <b>'1' (Aprovar)</b> ou <b>'2' (Ajustar)</b> para colocar no ar.<br/>"
-            "• <b>Resumo Diário às 20h:</b> Relatório limpo no celular com gasto do dia, vendas realizadas e faturamento."
+            "• <b>Sem Painéis Complicados:</b> O dono do negócio não precisa perder tempo abrindo computador ou aprendendo o Gerenciador de Anúncios.<br/>"
+            "• <b>Aprovação em 1 Clique:</b> O cliente recebe a prévia do anúncio no WhatsApp e responde apenas <b>'1' (Aprovar)</b> ou <b>'2' (Ajustar)</b> para colocar a campanha no ar.<br/>"
+            "• <b>Resumo Diário às 20h:</b> Relatório limpo enviado no celular com investimento do dia, número de vendas e retorno financeiro."
         ),
         (
-            "5. 🚀 Subida Técnica Perfeita & Travas Físicas de Segurança",
-            "• <b>Campanhas Profissionais:</b> Montagem de campanhas de vendas com pixel calibrado e públicos qualificados de compradores online.<br/>"
-            "• <b>Trava Física Anti-Erro:</b> Limite estrito de orçamento travado no sistema, garantindo que nenhum erro gaste mais do que o combinado com o cliente."
+            "5. 🚀 Subida Técnica Segura & Travas Físicas de Orçamento",
+            "• <b>Estrutura de Grandes Marcas:</b> Campanhas montadas com foco em vendas reais (`OUTCOME_SALES`), pixel configurado e públicos qualificados de compradores.<br/>"
+            "• <b>Trava Física Anti-Erro:</b> Limite rígido de orçamento diário travado no sistema, garantindo que nenhum bug ou erro operacional ultrapasse o teto acordado."
         ),
         (
-            "6. 🧬 Auditoria de DNA da Marca (Aproveitamento de Histórico)",
-            "• <b>Engenharia Reversa:</b> Conecta na conta existente e identifica quais foram os anúncios mais lucrativos da história da loja.<br/>"
-            "• <b>Aprendizado Contínuo:</b> O robô já começa sabendo o tom de voz e o público que mais compra na loja."
+            "6. 🧬 Auditoria de DNA do Negócio (Aproveitamento de Histórico)",
+            "• <b>Engenharia Reversa da Conta:</b> O robô analisa o histórico da conta de anúncios para descobrir quais produtos, textos e públicos mais geraram lucro no passado.<br/>"
+            "• <b>Aprendizado Contínuo:</b> A IA começa a rodar já sabendo o tom de voz e o comportamento do cliente do seu negócio."
         )
     ]
 
@@ -206,11 +206,11 @@ def build_pdf(filename: str):
     story.append(Spacer(1, 6))
 
     # =========================================================================
-    # MODELO DE NEGÓCIO & OFERTA COMERCIAL (VENDA CASADA)
+    # MODELO COMERCIAL & ESCALA DO NEGÓCIO
     # =========================================================================
-    story.append(Paragraph("Modelo Comercial: Fornecimento + Tecnologia (Venda Casada)", h1_style))
+    story.append(Paragraph("Modelo Comercial: Gestão Autônoma de Alta Margem", h1_style))
     story.append(Paragraph(
-        "A oferta une o <b>fornecimento das peças/camisetas</b> ao <b>robô de vendas no WhatsApp</b>, eliminando a maior barreira de quem compra vestuário: conseguir vender no digital.",
+        "Uma solução com barreira de entrada baixa e alto valor percebido, aplicável tanto para vendas casadas quanto para captação de clientes de qualquer setor:",
         body_style
     ))
 
@@ -223,15 +223,15 @@ def build_pdf(filename: str):
         ],
         [
             Paragraph("<b>Starter (Entrada)</b>", body_style),
-            Paragraph("Marcas iniciando (mínimo R$ 30/dia em ads)", body_style),
+            Paragraph("Negócios iniciando no tráfego (mínimo R$ 30/dia em ads)", body_style),
             Paragraph("<b>R$ 399,00 / mês</b>", body_style),
             Paragraph("Esteira contínua de criativos, proteção 24h de Stop-Loss e aprovações via WhatsApp", body_style)
         ],
         [
             Paragraph("<b>Growth (Escala)</b>", body_style),
-            Paragraph("Marcas consolidadas com alto volume de vendas", body_style),
+            Paragraph("Empresas consolidadas com alto volume de vendas", body_style),
             Paragraph("<b>R$ 799 a R$ 899 / mês</b>", body_style),
-            Paragraph("Volume ampliado de criativos semanais, escala de orçamento e auditorias avançadas", body_style)
+            Paragraph("Volume estendido de criativos semanais, escala de orçamento e auditorias avançadas", body_style)
         ]
     ]
 
@@ -247,19 +247,19 @@ def build_pdf(filename: str):
 
     story.append(Spacer(1, 8))
 
-    # Comparativo com mercado e Projeção
     comp_box = [
-        [Paragraph("<b>Por que a oferta fecha fácil? Comparativo de Mercado:</b>", card_header_style)],
+        [Paragraph("<b>Comparativo com o Mercado Tradicional:</b>", card_header_style)],
         [Paragraph(
-            "• <b>Agência / Gestor Tradicional:</b> Cobra de R$ 2.000 a R$ 4.000/mês, demora dias para criar um anúncio e atende vários clientes sem exclusividade.<br/>"
-            "• <b>Nossa Solução:</b> R$ 399/mês (uma fração do custo), velocidade instantânea, foco no nicho de roupas e proteção de caixa 24h por dia.",
+            "• <b>Agências / Gestores Humanos:</b> Cobram de R$ 2.000 a R$ 4.000/mês, demoram dias para subir um anúncio e atendem dezenas de clientes sem dedicação exclusiva.<br/>"
+            "• <b>Nossa Tecnologia:</b> A partir de R$ 399/mês, velocidade instantânea, personalização para qualquer nicho e vigilância financeira 24h por dia.",
             bullet_style
         )],
-        [Paragraph("<b>Projeção de Recorrência (MRR):</b>", card_header_style)],
+        [Paragraph("<b>Potencial de Recorrência (MRR):</b>", card_header_style)],
         [Paragraph(
-            "• <b>30 clientes ativos:</b> R$ 11.970,00 / mês<br/>"
-            "• <b>50 clientes ativos:</b> R$ 19.950,00 / mês<br/>"
-            "• <b>100 clientes ativos:</b> R$ 39.900,00 / mês",
+            "• <b>30 empresas ativas:</b> R$ 11.970,00 / mês<br/>"
+            "• <b>50 empresas ativas:</b> R$ 19.950,00 / mês<br/>"
+            "• <b>100 empresas ativas:</b> R$ 39.900,00 / mês<br/>"
+            "<i>(Aplicável a lojistas de moda, cosméticos, eletrônicos, infoprodutores e serviços locais em todo o Brasil).</i>",
             bullet_style
         )]
     ]
@@ -275,7 +275,7 @@ def build_pdf(filename: str):
     story.append(t_comp)
 
     doc.build(story, canvasmaker=NumberedCanvas)
-    print(f"[OK] PDF Executivo regenerado com sucesso em: {filename}")
+    print(f"[OK] PDF Multicategoria gerado com sucesso em: {filename}")
 
 
 if __name__ == "__main__":
