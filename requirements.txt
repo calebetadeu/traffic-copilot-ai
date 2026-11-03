@@ -1,0 +1,24 @@
+# Web Framework & API
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+pydantic>=2.9.0
+pydantic-settings>=2.6.0
+python-dotenv>=1.0.1
+httpx>=0.27.2
+
+# AI & Multimodal
+google-genai>=0.1.1
+
+# Task Scheduling & Automation
+apscheduler>=3.10.4
+
+# Database
+sqlmodel>=0.0.22
+
+# Image Processing
+pillow>=11.0.0
+rembg>=2.0.59
+
+# Utilities
+python-multipart>=0.0.12
+pytest>=8.3.3
